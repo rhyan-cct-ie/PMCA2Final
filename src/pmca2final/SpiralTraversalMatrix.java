@@ -17,6 +17,7 @@ class SpiralTraversalMatrix {
     int rows = 0, cols = 0;
     while (true) {
         try{//Handle invalid input for matrix dimensions
+            
             System.out.println("Enter rows and columns of matrix");
             rows = sc.nextInt();
             cols = sc.nextInt();
@@ -36,25 +37,35 @@ class SpiralTraversalMatrix {
     
     // Step 3: Create a matrix and accept its elements
     int[][] matrix = new int[rows][cols];
-    System.out.println("Enter elements of the matrix:");
+    System.out.println("Enter elements of the matrix row by row:");
     
+    sc.nextLine();
+    //Read matrix rows
     for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                while (true) {
-                    try {// handle invalid input for matrix elements
-                        matrix[i][j] = sc.nextInt();  // Read element from user input
-                        break;  // Exit the loop if valid input is received
-                    } catch (InputMismatchException e) {
-                        System.out.println("Invalid input. Please enter an integer for position (" + i + "," + j + ").");
-                        sc.nextLine();  // Clear the buffer
+            while (true) {
+                try {// handle invalid input for matrix elements
+                    System.out.println("Enter row " + (i + 1)+ " (integers seperated by space):");
+                    String rowInput = sc.nextLine();
+                    String[] elements = rowInput.split("\\s+");
+                    
+                    if (elements.length != cols) {
+                    System.out.println("Invalid number of elements. Please enter exactly " + cols + " integers.");
+                    continue;
+                    }
+                    for (int j = 0; j < cols; j++) {
+                    matrix[i][j] = Integer.parseInt(elements[j]);  // Convert string to integer and assign to matrix
+                    }
+                    break;  // Exit the loop if valid input is received
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter valid integers for row " + (i + 1) + ".");
                     }
                 }
             }
-        }
-    // Step 4: Initialize boundaries for the spiral traversal
+        
+    // Step 4: Initialise boundaries for the spiral traversal
     int top = 0, bottom = rows - 1, left = 0, right = cols - 1;
 
-        System.out.print("Spiral Traversal: ");
+    System.out.print("Spiral Traversal: ");
     // Step 5: Traverse in a spiral order until the boundaries meet
     while (top <= bottom && left <= right) {
             // Traverse from left to right across the top row
