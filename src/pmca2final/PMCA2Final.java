@@ -4,6 +4,8 @@
  */
 package pmca2final;
 
+import java.util.Scanner;
+
 /**
  *
  * @author reg05
@@ -15,6 +17,16 @@ public class PMCA2Final {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+       
+        //Task 1
+            ArraySearch.arraySearch(sc);
+        //Task 2
+        //Task 3
+        //Task 4
+        //Task 5
+           
+   
     }
     
 }
