@@ -24,6 +24,7 @@ public class PMCA2Final {
         //Task 2
             MultplicationTable.multiplicationTable(sc);
         //Task 3
+            DiagonalSumMatrix.diagonalSumMatrix(sc);
         //Task 4
         //Task 5
            

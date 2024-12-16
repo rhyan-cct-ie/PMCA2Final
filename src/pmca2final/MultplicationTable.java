@@ -35,6 +35,6 @@ class MultplicationTable {//NEEDS ERROR HANDLING
             System.out.println();
         }
 
-        sc.close();
+        
     }
 }
