@@ -22,6 +22,7 @@ public class PMCA2Final {
         //Task 1
             ArraySearch.arraySearch(sc);
         //Task 2
+            MultplicationTable.multiplicationTable(sc);
         //Task 3
         //Task 4
         //Task 5
