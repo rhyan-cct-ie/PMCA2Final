@@ -39,7 +39,7 @@ class DiagonalSumMatrix {
         System.out.println("Sum of main diagonal: " + mainDiagonalSum);
         System.out.println("Sum of secondary diagonal: " + secondaryDiagonalSum);
         
-        sc.close();
+       
         }
 
   

@@ -26,9 +26,11 @@ public class PMCA2Final {
         //Task 3
             DiagonalSumMatrix.diagonalSumMatrix(sc);
         //Task 4
+            SpiralTraversalMatrix.spiralTraversalMatrix(sc);
         //Task 5
+        
            
-   
+    sc.close();
     }
     
 }
