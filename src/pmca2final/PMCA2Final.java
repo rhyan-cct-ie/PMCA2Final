@@ -28,7 +28,7 @@ public class PMCA2Final {
         //Task 4
             SpiralTraversalMatrix.spiralTraversalMatrix(sc);
         //Task 5
-        
+            BubbleSort.bubbleSort(sc);
            
     sc.close();
     }
