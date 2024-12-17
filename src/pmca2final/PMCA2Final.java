@@ -69,7 +69,7 @@ public class PMCA2Final {
             System.out.println("Invalid input. Please enter a valid number.");
         } finally {// Ensure the scanner is closed by using the finally block
            sc.close();
-           System.out.println("Scanner closed successfully.");//Confirmation message that the scanner has closed
+           System.out.println("Scanner closed successfully.");//Confirmation message that the program has been terminated
         }
     }
 }
