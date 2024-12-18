@@ -65,9 +65,26 @@ public class PMCA2Final {
                     default:
                         System.out.println("Invalid option, please choose a number between 1 to 6.");
                 }
+                // Ask the user if they want to continue or choose another task//review this part and add error handling//to save
+                if (running) {
+                    try {
+                        System.out.print("\nDo you want to continue with another task? (yes or no): ");
+                        sc.nextLine();  // Consume the newline left by nextInt()
+                        String answer = sc.nextLine().toLowerCase();
+                        if (answer.equals("no")) {
+                            running = false;
+                            System.out.println("Exiting the program...");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input! Please enter 'yes' or 'no'.");
+                        sc.nextLine(); // Clear the buffer
+                    } catch (Exception e) {
+                        System.out.println("An unexpected error occurred: " + e.getMessage());
+                    }
+                }
             }//closes the while loop
-        } catch (InputMismatchException e){
-            System.out.println("Invalid input. Please enter a valid number.");
+        } catch (InputMismatchException e){ //catch-block
+            System.out.println("Invalid input. Please enter a valid number."); //Prompt user to enter a valid option (1-6)
         } finally {// Ensure the scanner is closed by using the finally block
            sc.close();
            System.out.println("Scanner closed successfully.");//Confirmation message that the program has been terminated
