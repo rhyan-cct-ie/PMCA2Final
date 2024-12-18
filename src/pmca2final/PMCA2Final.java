@@ -17,20 +17,20 @@ public class PMCA2Final {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         Scanner sc = new Scanner(System.in);//Initialise scanner
        
         try{
             boolean running = true;//Flag to control the program loop
             
             while(running){
-                System.out.println("\nWhat task do you want to run?");
-                System.out.println("1. Array Search");
-                System.out.println("2. Multiplication Table");
-                System.out.println("3. Diagonal Sum of a Matrix");
-                System.out.println("4. Spiral Traversal of a Matrix");
-                System.out.println("5. Bubble Sort");
-                System.out.println("6. Exit the Program");
+                System.out.println("\nPlease select a task or press 6 to exit.");
+                System.out.println("1. TASK 1: Array Search");
+                System.out.println("2. TASK 2: Multiplication Table");
+                System.out.println("3. TASK 3: Diagonal Sum of a Matrix");
+                System.out.println("4. TASK 4: Spiral Traversal of a Matrix");
+                System.out.println("5. TASK 5: Bubble Sort");
+                System.out.println("6. EXIT the program");
             
                 System.out.print("Enter your choice (1-6): ");
                 int option = sc.nextInt();//Read user selection
@@ -39,27 +39,28 @@ public class PMCA2Final {
                 switch (option){
                     case 1:
                     //Task 1
-                    ArraySearch.arraySearch(sc);
+                    ArraySearch.arraySearch(sc);//Calls the method 
                         break;
                     case 2:
                     //Task 2
-                    MultplicationTable.multiplicationTable(sc);
+                    MultplicationTable.multiplicationTable(sc);//Calls the method 
                         break;
                     case 3:
                         //Task 3
-                    DiagonalSumMatrix.diagonalSumMatrix(sc);
+                    DiagonalSumMatrix.diagonalSumMatrix(sc);//Calls the method 
                         break;
                     case 4:
                     //Task 4
-                    SpiralTraversalMatrix.spiralTraversalMatrix(sc);
+                    SpiralTraversalMatrix.spiralTraversalMatrix(sc);//Calls the method 
                         break;
                     case 5:
                     //Task 5
-                    BubbleSort.bubbleSort(sc);
+                    BubbleSort.bubbleSort(sc);//Calls the method 
                         break;
+                    //Terminate the program
                     case 6:
                         System.out.println("Exiting the program...");
-                        running = false; //Exit the loops to ed the program
+                        running = false; //Exit the loops to ed the program by setting running to false
                         break;
                     default:
                         System.out.println("Invalid option, please choose a number between 1 to 6.");

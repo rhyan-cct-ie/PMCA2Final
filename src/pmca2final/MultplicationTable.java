@@ -12,6 +12,8 @@ import java.util.Scanner;
  */
 class MultplicationTable {
     public static void multiplicationTable(Scanner sc){
+      //Method that generates a multiplication table using a 2D array
+      System.out.println("You selected Task 2: Multiplication Table Using 2D Array");
       int tableSize = 0;//Initialise the variable to store the sie of the table
         
         //Prompt the user for size of the multiplication table. Only positive integers are accepted
@@ -33,7 +35,7 @@ class MultplicationTable {
       //Initialize a 2D array to store the multiplication table
         int[][] table = new int[tableSize][tableSize];
         
-        //loop to fill the table with user input for each element
+        //Loop to fill the table with user input for each element
         System.out.println("Enter the elements of the multiplication table row by row:");
         for (int i = 0; i < tableSize; i++) {//loop through eacg row
             for (int j = 0; j < tableSize; j++) {//loop through each column in the row
@@ -43,7 +45,7 @@ class MultplicationTable {
                     table[i][j] = sc.nextInt();//Store the valid input into the table
                     break;//exit the loop if valid input is entered
                 } else {
-                    System.out.println("Invalid input");
+                    System.out.println("Invalid input. Please enter a valid integer.");
                     sc.next();//delete invalid input and allow new entry from user
                 }
                   

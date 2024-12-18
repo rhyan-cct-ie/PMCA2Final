@@ -12,7 +12,10 @@ import java.util.Scanner;
  * @author reg05
  */
 class SpiralTraversalMatrix {
+    //Method to traverse a matrix in spiral order
     public static void spiralTraversalMatrix(Scanner sc) {
+    System.out.println("You selected Task 4: Spiral Traversal of a Matrix");
+        
     // Step 1: Get matrix dimensions from the user
     int rows = 0, cols = 0;
     while (true) {

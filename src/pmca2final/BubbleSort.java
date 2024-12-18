@@ -12,8 +12,11 @@ import java.util.Scanner;
  */
 class BubbleSort {
      public static void bubbleSort(Scanner sc) {
+        /*Method that implements the Bubble Sort algorithm to sort an array of integers in
+        ascending order*/
+        System.out.println("You selected Task 5: Bubble Sort - Sorting an Array");
          //Get the array from the user
-         System.out.print("Enter the size of the array: ");
+        System.out.print("Enter the size of the array: ");
          //Read the size of the array from user input
          int size = sc.nextInt();
          //Validate the size (size must be a positive number)

@@ -12,9 +12,10 @@ import java.util.Scanner;
  *
  * @author reg05
  */
-class ArraySearch {//NEEDS REVIEW, NEEDS ERROR HANDLING
+class ArraySearch {//NEEDS REVIEW
     //Method that performs the search for repeated elements in the array
     public static void arraySearch(Scanner sc) {
+        System.out.println("You selected Task 1: Array Search – Find the First Repeated Element");
         try{
         //Prompt the user to enter the size of the array
         System.out.print("Enter the size of the array: ");
