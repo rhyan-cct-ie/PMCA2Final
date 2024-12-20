@@ -16,7 +16,7 @@ class SpiralTraversalMatrix {
     public static void spiralTraversalMatrix(Scanner sc) {
     System.out.println("You selected Task 4: Spiral Traversal of a Matrix");
         
-    // Step 1: Get matrix dimensions from the user
+    //Get matrix dimensions from the user
     int rows = 0, cols = 0;
     while (true) {
         try{//Handle invalid input for matrix dimensions
@@ -25,7 +25,7 @@ class SpiralTraversalMatrix {
             rows = sc.nextInt();
             cols = sc.nextInt();
         
-            //2: Validate matrix dimensions (accepts only positive integers)
+            //Validate matrix dimensions (accepts only positive integers)
             if(rows <=0 || cols <= 0){
                 System.out.println("Matrix dimensions must be positive integers");
                 continue;
@@ -38,7 +38,7 @@ class SpiralTraversalMatrix {
    }   
         
     
-    // Step 3: Create a matrix and accept its elements
+    //Create a matrix and accept its elements
     int[][] matrix = new int[rows][cols];
     System.out.println("Enter elements of the matrix row by row:");
     
@@ -65,11 +65,11 @@ class SpiralTraversalMatrix {
                 }
             }
         
-    // Step 4: Initialise boundaries for the spiral traversal
+    //Initialise boundaries for the spiral traversal
     int top = 0, bottom = rows - 1, left = 0, right = cols - 1;
 
     System.out.print("Spiral Traversal: ");
-    // Step 5: Traverse in a spiral order until the boundaries meet
+    //Traverse in a spiral order until the boundaries meet
     while (top <= bottom && left <= right) {
             // Traverse from left to right across the top row
             for (int i = left; i <= right; i++) {
@@ -98,7 +98,6 @@ class SpiralTraversalMatrix {
                 left++;// Move the left boundary right
             }
             }
-            System.out.println();
         }    
     }
 }

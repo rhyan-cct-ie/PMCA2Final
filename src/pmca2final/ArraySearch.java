@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author reg05
  */
-class ArraySearch {//NEEDS REVIEW
+class ArraySearch {
     //Method that performs the search for repeated elements in the array
     public static void arraySearch(Scanner sc) {
         System.out.println("You selected Task 1: Array Search – Find the First Repeated Element");
@@ -29,9 +29,11 @@ class ArraySearch {//NEEDS REVIEW
         }
 
         // Create a HashSet to track the elements that have been seen
+        //To track the elements that have already been seen in the array. 
+        //It helps efficiently identify the first repeated element by checking if an element is already in the set.
+        //If a repeated element is found, it is printed.
+     
         HashSet<Integer> seenElements = new HashSet<>();
-        // Create a HashSet to store repeated elements
-//        HashSet<Integer> repeatedElements = new HashSet<>();
         
         // Iteration through the array to check for repeated elements
         for (int i = 0; i < size; i++) {
@@ -39,7 +41,7 @@ class ArraySearch {//NEEDS REVIEW
                 // Print the first repeated element and exit the method
                 System.out.println("First repeated element: " + array[i]);
                 return;// Exit the method after finding the first repeated element
-//                repeatedElements.add(array[i]);
+                
             } else {
                 seenElements.add(array[i]);// Add the element to the set if it's not repeated
             }
